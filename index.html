@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YashOP - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        body {
+            background-color: rgb(15, 15, 14);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li {
+            text-decoration: none;
+            color: white;
+            justify-content: space-evenly;
+        }
+
+        nav ul li :hover {
+            color: lightcoral;
+            font-size: 1.1rem;
+        }
+
+        main hr {
+            border: 0;
+            background: lightblue;
+            height: 1.2px;
+            margin: -20px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 130px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+
+        }
+
+        .leftSection {
+            font-size: 3rem;
+            margin: 30px 0;
+            text-decoration: none;
+        }
+
+        .leftSection .button {
+            padding: 50px 0px;
+            text-decoration: none;
+        }
+
+
+        .leftSection .btn {
+            padding: 12px;
+            background: blueviolet;
+            color: white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn::after {
+            content: '';
+            display: block;
+            height: 4px;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.7s ease;
+
+        }
+
+        .btn:hover::after {
+            transform: scaleX(1);
+        }
+
+        .rightSection img {
+            background-color: rgb(44, 44, 203);
+            width: 80%;
+            margin: 10px;
+            border-radius: 30%;
+            box-shadow: 10px 10px 20px 2px blueviolet;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        .text-gray {
+            color: gray;
+            text-align: center;
+            justify-content: center;
+            margin-left: 50px;
+        }
+
+        #element {
+            color: blueviolet;
+
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.8rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 77vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+
+        .image-top {
+            width: 45px;
+            position: relative;
+            top: -52px;
+            left: -19px;
+
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 48px;
+            width: 150px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+
+        }
+
+        .csb {
+            margin-top: 220px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .csb a {
+            list-style-type: none;
+            text-decoration: none;
+        }
+
+        .vertical-lines {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .vertical-lines::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            background-color: wheat;
+            height: 130px;
+            transition: background-color 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .vertical-lines:hover::before {
+            background-color: rgb(166, 51, 9);
+        }
+
+        .j {
+            display: flex;
+            margin-top: 160px;
+            margin-left: 110px;
+            color: #e3410b;
+        }
+
+        .tom {
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: grid;
+            grid-template-columns: repeat(3, 0fr);
+            text-align: center;
+
+        }
+
+        .dom {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tom a {
+            display: inline-block;
+            background: white;
+            /* Set the desired background color and opacity */
+            padding: 10px 20px;
+            height: 55px;
+            border: 2px solid black;
+            opacity: 0.9;
+            margin: 5px;
+            color: #5291d1;
+            /* Set the desired text color */
+            text-decoration: none;
+        }
+
+        .dom img {
+            float: right;
+            display: block;
+            width: 40%;
+            height: auto;
+            margin-right: 280px;
+            border-radius: 42px;
+        }
+
+        .uy h1 {
+            margin-left: 110px;
+
+        }
+
+        .uy p {
+            margin-left: 110px;
+        }
+
+        .rsp {
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            justify-content: space-evenly;
+
+        }
+
+        .container {
+            margin-top: -8px;
+            margin-bottom: -8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .image {
+            margin-right: 20px;
+        }
+
+        .about-me p {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .heo p {
+            margin-left: 250px;
+        }
+
+        .do p {
+            margin-left: 250px;
+        }
+
+        .do a {
+
+            margin-left: 210px;
+
+        }
+
+        .do li {
+            margin-top: 50px;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .container {
+            background-image: url('16.jpg');
+            background-size: 100%;
+        }
+
+        .hi dialog {
+            margin-left: 500px;
+            margin-top: 400px;
+            color: #97169c;
+            font-size: 32px;
+            padding-right: 65px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .boy {
+            text-align: start;
+        }
+
+        .image img {
+            margin-left: 500px;
+        }
+
+        .h {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -4px;
+            padding: 20px;
+        }
+
+        .bh {
+            background-image: url('15.jpeg');
+        }
+
+        .h::before,
+        .h::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background-color: rgb(124, 124, 124);
+        }
+
+        .h::before {
+            margin-left: 550px;
+            margin-right: 20px;
+        }
+
+        .h::after {
+            margin-right: 550px;
+            margin-left: 20px;
+        }
+
+        .h {
+            color: white;
+        }
+
+        .co {
+            color: white;
+            display: flex;
+            justify-content: center;
+            gap: 150px;
+            font-weight: bold;
+            font-size: 30px;
+            padding-bottom: 69px;
+        }
+
+        .co div a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .imgg {
+
+            height: 300px;
+            width: 480px;
+            border: 5px solid #691ecc;
+
+            overflow: hidden;
+        }
+
+        .imgg:hover {
+            transform: scale(1.09);
+        }
+
+        .parent:hover>img:not(:hover) {
+            opacity: 0.2;
+        }
+
+        footer {
+
+            background-color: rgb(0, 0, 0);
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 80px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer h1 {
+            text-align: center;
+            margin: auto;
+        }
+
+        .footer ul {
+            list-style-type: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0px;
+        }
+
+        .cv {
+            margin-left: 50px;
+        }
+
+        .queen {
+            flex: 1;
+            padding: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-left: 45px;
+            width: 70%;
+            background-image: url('6.jpeg');
+            padding: 67px;
+            border: 60px solid black;
+            border-radius: 23px;
+            box-shadow: 0px 10px 20px rgb(127, 41, 202);
+            border-top: 0;
+            border-bottom: 0;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 7px;
+        }
+
+        input {
+            margin-bottom: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .button1 {
+            margin-top: 40px;
+            margin-right: 40px;
+        }
+
+        .btn1 {
+            width: 9rem;
+            height: 3rem;
+            border-radius: 30em;
+            color: #000;
+            font-size: 15px;
+            font-family: inherit;
+            border: none;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 6px 6px 12px 3px rgb(127, 41, 202),
+                -6px -6px 12px #000000;
+        }
+
+        .btn1::before {
+            content: '';
+            width: 0;
+            height: 3em;
+            border-radius: 30em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(to right, rgb(127, 41, 202) 0%, #c25b9c 100%);
+            transition: 0.5s ease;
+            display: block;
+            z-index: -1;
+        }
+
+        .btn1:hover::before {
+            width: 9em;
+
+        }
+
+        .burger {
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            right: 5%;
+            top: 15px;
+        }
+
+        .line {
+            width: 33px;
+            background-color: #fff;
+            height: 4px;
+            margin: 3px 3px;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                justify-content: center;
+                align-items: center;
+                height: 400px;
+                background-color: rgb(0, 0, 0);
+                transition: all 0.7s ease-out;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                font-size: large;
+            }
+
+            /* .firstSection {
+                display: flex;
+                justify-content: center;
+            } */
+            .burger {
+                display: block;
+            }
+
+            .h-nav-resp {
+                height: 60px;
+            }
+
+            .v-class-resp {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sticky">
+        <header>
+            <nav class="navbar h-nav-resp">
+                <img src="developer.png" width="80px" alt="sorry">
+
+                <div class="left v-class-resp">YashOP's Portfolio
+
+                </div>
+
+                <div class="right v-class-resp">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Services">Services</a></li>
+                        <li><a href="#Contact">Contact me</a></li>
+                    </ul>
+                </div>
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple"> Yash Sharma </span>
+                <div>and I am a</div>
+                <!--<div>WEB DEVELOPER.</div>-->
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn"><a href="#" download="#" style="color: rgb(255, 255, 255);">Download
+                            Resume</a></button>
+                    <button class="btn"><a href="#" download="#" style="color: white;">Visit Github</a></button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="My.jpg" alt="Website" width="123">
+            </div>
+
+        </section>
+        <hr>
+        <second class="secondsection" id="About">
+            <span class="text-gray">What I had done so far</span>
+            <centre>
+                <h1 class="cv">Work Experience</h1>
+            </centre>
+            <div class="box" style="background: rgb(155, 142, 151);
+            width: 90vw;
+            height: 2px;
+            margin: 169px 0;
+            display: flex;">
+                <div class="vertical" style="height: 93px;
+                width: 1px;
+                background-color: white;
+                margin: 0 100px;"><img class="image-top" src="html.png" alt="">
+                    <div class="vertical-title">HTML Developer</div>
+                    <div class="vertical-desc">
+                    </div>
+                </div>
+                <div class="vertical" style="height: 93px;
+                width: 1px;
+                background-color: white;
+                margin: 0 100px;"><img class="image-top" src="css.png" alt="">
+                    <div class="vertical-title">CSS Developer</div>
+                    <div class="vertical-desc">
+                    </div>
+                </div>
+                <div class="vertical" style="height: 93px;
+                width: 1px;
+                background-color: white;
+                margin: 0 100px;"><img class="image-top" src="js.png" alt="">
+                    <div class="vertical-title">JavaScript Developer</div>
+                    <div class="vertical-desc">
+                    </div>
+                </div>
+                <div class="vertical" style="height: 93px;
+                width: 1px;
+                background-color: white;
+                margin: 0 100px;"><img class="image-top" src="react.png" alt="">
+                    <div class="vertical-title">React.js Developer</div>
+                    <div class="vertical-desc">
+                    </div>
+                </div>
+                <div class="vertical" style="height: 93px;
+                width: 1px;
+                background-color: white;
+                margin: 0 100px;"><img class="image-top" src="node.png" alt="">
+                    <div class="vertical-title">Node.js Developer</div>
+                    <div class="vertical-desc">
+                    </div>
+                </div>
+                <div class="vertical" style="height: 93px;
+                width: 1px;
+                background-color: white;
+                margin: 0 100px;"><img class="image-top" src="express.png" alt="">
+                    <div class="vertical-title">Express.js Developer</div>
+                    <div class="vertical-desc">
+                    </div>
+                </div>
+                <div class="vertical" style="height: 93px;
+                width: 1px;
+                background-color: white;
+                margin: 0 100px;"><img class="image-top" src="mongo.jpg" alt="">
+                    <div class="vertical-title">MongoDB Developer</div>
+                    <div class="vertical-desc">
+                    </div>
+                </div>
+                <div class="vertical" style="height: 93px;
+                width: 1px;
+                background-color: white;
+                margin: 0 100px;"></div>
+                <div class="vertical" style="height: 93px;
+                width: 1px;
+                background-color: white;
+                margin: 0 100px;"></div>
+
+            </div>
+        </second>
+
+        <section class="thirdsection">
+            <div class="ch">
+
+                <div class="csb">
+
+
+                    <div><a href="# "><img src="4.jpeg" alt="">
+                            <h5>Dedication</h5>
+                        </a>
+                        <p style="color: #fcfdff;">Most common methods for <br> designing websites that work <br> well
+                            on
+                            desktop design</p>
+                    </div>
+                    <div class="vertical-lines"></div>
+                    <div><a href="#"><img src="5.jpeg" alt="">
+                            <h5>Smart Work</h5>
+                        </a>
+                        <p style="color: #fbfdff;">Most common methods for <br> designing websites that work <br> well
+                            on
+                            desktop design</p>
+                    </div>
+                    <div class="vertical-lines"></div>
+                    <div><a href="#"><img src="2.jpeg" alt="">
+                            <h5>Intelligence</h5>
+                        </a>
+                        <p style="color: #fefeff;">Most common methods for <br> designing websites that work <br> well
+                            on
+                            desktop design</p>
+                    </div>
+                </div>
+
+
+                <div class="rsp">
+
+
+                    <div style="font-size: 34px;"> <u style="font-size: 46px;">120+</u> Downloaded <div class="gf">
+                            Products
+                        </div>
+                    </div>
+
+
+                    <div style="font-size: 34px;"><u style="font-size: 46px;">40K</u> Open source <div class="gf">
+                            Projects</div>
+                    </div>
+
+                    <div style="font-size: 34px;"><u style="font-size: 46px;">100%</u> Satisfaction <div class="fg">
+                            Guarantee
+                        </div>
+                    </div>
+
+                </div>
+
+        </section>
+
+        <section class="fourthsection">
+            <div class="dom">
+                <div class="tom">
+                    <a>HTML5</a>
+                    <a>PHP</a>
+                    <a>Firebase</a>
+                    <a>CSS3</a>
+                    <a>JS</a>
+                    <a>Java</a>
+                    <a>kotlin</a>
+                    <a>Larvel</a>
+                    <a>API</a>
+                </div>
+                <div class="uy">
+                    <div class="j">My Skills</div>
+                    <img src="10.jpeg" alt="">
+                    <div>
+                        <h1>Everyday<br>develop skill</h1>
+                        <p style="color: #0e3473; margin-right: 50px;">While at Nevebland over the last few
+                            years,<br>I've worked on web and
+                            product
+                            solutions for <br>a range of startups,in a varity of industries.<br>Work skills used</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr color="aqua" style="margin-top: 56px;" id="Services">
+
+        <div class="container">
+
+            <div class="image" style="margin-top: 88px;">
+                <p class="boy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo modi molestias
+                    exercitationem laborum excepturi eum culpa qui numquam esse, ab commodi quidem alias suscipit nemo
+                    itaque quisquam delectus quam! Soluta.</p>
+                <div class="hi">
+                    <a>
+                        <dialog open=> 4+ Years of <br> training </dialog>
+                    </a>
+
+                    <img src="12.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="bh">
+            <div class="h">
+                <h2>My Clients</h2>
+            </div>
+            <div class="co">
+                <div><a href="#">ENVATO</a></div>
+                <div> <a href="#">GOOGLE</a></div>
+                <div><a href="#">COLORLIB.</a></div>
+                <div><a href="#">ANGULAR</a></div>
+            </div>
+        </div>
+
+
+        <div class="parent">
+            <img class="imgg" src="first.png" alt="">
+            <img class="imgg" src="second.png" alt="">
+            <img class="imgg" src="eigth.jpg" alt="">
+            <img class="imgg" src="fourth.png" alt="">
+            <img class="imgg" src="fifth.png" alt="">
+            <img class="imgg" src="seventh.png" alt="">
+        </div>
+
+    </main>
+
+    <footer id="Contact">
+        <div class="footer">
+            <h1>Contact me</h1>
+            <div class="queen">
+                <form>
+                    <div class="mou">
+                        <input type="name" placeholder="Name" required><br>
+                    </div>
+                    <div class="mou">
+                        <input type="email" placeholder="Email" required><br>
+                    </div>
+                    <div class="mou">
+                        <textarea rows="4" cols="50" placeholder="Message..." required></textarea><br>
+                    </div>
+                    <div class="mou">
+                        <button class="btn1">Submit</button>
+                    </div>
+                    <br>
+
+                </form>
+            </div>
+        </div>
+        <div class="footer-rights">
+            &#169; www.YashOP'sPorfolio.com || All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="resp1.js"></script>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.', 'Web Designer.', 'Photo Editor.', ' and Video Editor.', ' '],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
