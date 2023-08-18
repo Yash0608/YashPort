@@ -19,6 +19,11 @@
             scroll-behavior: smooth;
         }
 
+        ::selection {
+            background-color: #a2b14000;
+            color: #691ecc00;
+        }
+
         .sticky {
             position: sticky;
             top: 0;
@@ -27,7 +32,7 @@
 
         body {
             background-color: rgb(15, 15, 14);
-            color: white;
+            color: #5e6191;
             font-family: 'Poppins', sans-serif;
         }
 
@@ -126,7 +131,7 @@
         .rightSection img {
             background-color: rgb(44, 44, 203);
             width: 80%;
-            margin: 10px;
+            margin-left: -35px;
             border-radius: 30%;
             box-shadow: 10px 10px 20px 2px blueviolet;
         }
@@ -425,7 +430,7 @@
 
         footer {
 
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(15, 15, 14);
 
         }
 
@@ -470,17 +475,63 @@
             width: 70%;
             background-image: url('6.jpeg');
             padding: 67px;
-            border: 60px solid black;
+            border: 60px solid rgb(15, 15, 14);
             border-radius: 23px;
             box-shadow: 0px 10px 20px rgb(127, 41, 202);
             border-top: 0;
             border-bottom: 0;
         }
 
+        .form_group {
+            position: relative;
+            padding: 15px 0 0;
+            width: 100%;
+        }
+
+        .form_field {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 100%;
+            border: 0;
+            border-bottom: 2px solid gray;
+            outline: 0;
+            font-size: 1.3rem;
+            color: #fff;
+            padding: 7px 0;
+            background: transparent;
+        }
+
+        .form_field::placeholder {
+            color: transparent;
+        }
+
+        .form_field:placeholder-shown~.form_label {
+            font-size: 2rem;
+            cursor: text;
+            top: 20px;
+
+        }
+
+        .form_label {
+            position: absolute;
+            display: block;
+            top: 0;
+            font-size: 0.7rem;
+            color: grey;
+            transition: 0.2s;
+
+        }
+
         input,
         textarea {
             width: 100%;
             padding: 7px;
+        }
+
+        .ta {
+            background-color: rgb(15, 15, 14);
+            color: #fff;
+            font-size: 1rem;
+            border: 3px solid gray;
         }
 
         input {
@@ -544,7 +595,7 @@
             margin: 3px 3px;
         }
 
-        @media only screen and (max-width: 1100px) {
+        @media screen and (max-width: 768px) {
             .navbar {
                 display: flex;
                 flex-direction: column;
@@ -578,6 +629,191 @@
             .v-class-resp {
                 opacity: 0;
             }
+
+
+            .firstSection {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .leftSection {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .rightSection {
+                text-align: center;
+            }
+
+            .rightSection img {
+                background-color: rgb(44, 44, 203);
+                width: 100%;
+                margin-left: -35px;
+                border-radius: 30%;
+                box-shadow: 10px 10px 20px 2px blueviolet;
+            }
+
+            .secondsection {
+                display: none;
+            }
+
+            .box {
+                flex-direction: column;
+                background: rgb(155, 142, 151);
+                width: 90vw;
+                height: 2px;
+                margin: 15px 0;
+                display: flex;
+            }
+
+            .image-top {
+                width: 45px;
+                position: relative;
+                top: 65px;
+                left: -19px;
+            }
+
+            .vertical {
+                margin: 10px 0;
+            }
+
+
+            .vertical-title,
+            .vertical-desc {
+                font-size: 14px;
+            }
+
+
+            .ch {
+                flex-direction: column;
+
+            }
+
+            .csb {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .vertical-lines {
+                display: none;
+
+            }
+
+            .rsp {
+                flex-direction: column;
+
+                align-items: center;
+
+                margin-top: 20px;
+
+            }
+
+
+            .rsp div {
+                font-size: 24px;
+            }
+
+            .dom {
+                flex-direction: column;
+            }
+
+            .dom img {
+                float: right;
+                display: block;
+                width: 40%;
+                height: auto;
+                margin-right: 82px;
+                border-radius: 42px;
+            }
+
+            .tom a {
+                display: inline-block;
+                background: white;
+                padding: 1px 16px;
+                height: 51px;
+                border: 2px solid black;
+                border-radius: 20px;
+                opacity: 0.9;
+                margin: 5px;
+                color: #5291d1;
+                text-decoration: none;
+            }
+
+            .uy {
+                margin-top: 20px;
+            }
+
+            .j {
+                text-align: center;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .uy h1 {
+                font-size: 24px;
+                line-height: 1.3;
+
+            }
+
+            .uy p {
+                font-size: 14px;
+                margin-right: 100px;
+
+            }
+
+            .image img {
+                margin-left: 2px;
+            }
+
+            .hi dialog {
+                margin-left: 480px;
+                margin-top: 290px;
+                color: #97169c;
+                font-size: 32px;
+                padding-right: 65px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+
+            .bh {
+                text-align: center;
+            }
+
+            .co {
+                display: flex;
+                flex-wrap: wrap;
+                padding-bottom: 12px;
+                justify-content: center;
+                gap: 4px;
+            }
+
+            .co div {
+                width: 100%;
+            }
+
+            .imgg {
+                height: 300px;
+                width: 708px;
+                border: 5px solid #691ecc;
+                overflow: hidden;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                margin-left: 45px;
+                width: 40%;
+                background-image: url(6.jpeg);
+                border: 60px solid rgb(15, 15, 14);
+                border-radius: 23px;
+                box-shadow: 0px 10px 20px rgb(127, 41, 202);
+                border-top: 0;
+                border-bottom: 0;
+            }
+
         }
     </style>
 </head>
@@ -618,7 +854,8 @@
                 <div class="buttons">
                     <button class="btn"><a href="#" download="#" style="color: rgb(255, 255, 255);">Download
                             Resume</a></button>
-                    <button class="btn"><a href="#" download="#" style="color: white;">Visit Github</a></button>
+                    <button class="btn"><a href="https://vercel.com/yash0608" download="#" style="color: white;">Visit
+                            Github</a></button>
                 </div>
             </div>
             <div class="rightSection">
@@ -626,16 +863,16 @@
             </div>
 
         </section>
-        <hr>
+
         <second class="secondsection" id="About">
-            <span class="text-gray">What I had done so far</span>
+            <span class="text-gray">What I have done so far</span>
             <centre>
                 <h1 class="cv">Work Experience</h1>
             </centre>
             <div class="box" style="background: rgb(155, 142, 151);
             width: 90vw;
             height: 2px;
-            margin: 169px 0;
+            margin: 50px 0;
             display: flex;">
                 <div class="vertical" style="height: 93px;
                 width: 1px;
@@ -693,14 +930,14 @@
                     <div class="vertical-desc">
                     </div>
                 </div>
-                <div class="vertical" style="height: 93px;
+                <!-- <div class="vertical" style="height: 93px;
                 width: 1px;
                 background-color: white;
                 margin: 0 100px;"></div>
                 <div class="vertical" style="height: 93px;
                 width: 1px;
                 background-color: white;
-                margin: 0 100px;"></div>
+                margin: 0 100px;"></div> -->
 
             </div>
         </second>
@@ -714,7 +951,7 @@
                     <div><a href="# "><img src="/PFL2/4.jpeg" alt="">
                             <h5>Dedication</h5>
                         </a>
-                        <p style="color: #fcfdff;">Most common methods for <br> designing websites that work <br> well
+                        <p style="color: #3761b4;">Most common methods for <br> designing websites that work <br> well
                             on
                             desktop design</p>
                     </div>
@@ -722,7 +959,7 @@
                     <div><a href="#"><img src="/PFL2/5.jpeg" alt="">
                             <h5>Smart Work</h5>
                         </a>
-                        <p style="color: #fbfdff;">Most common methods for <br> designing websites that work <br> well
+                        <p style="color: #3761b4;">Most common methods for <br> designing websites that work <br> well
                             on
                             desktop design</p>
                     </div>
@@ -730,7 +967,7 @@
                     <div><a href="#"><img src="/PFL2/2.jpeg" alt="">
                             <h5>Intelligence</h5>
                         </a>
-                        <p style="color: #fefeff;">Most common methods for <br> designing websites that work <br> well
+                        <p style="color: #3761b4;">Most common methods for <br> designing websites that work <br> well
                             on
                             desktop design</p>
                     </div>
@@ -833,14 +1070,22 @@
             <h1>Contact me</h1>
             <div class="queen">
                 <form>
-                    <div class="mou">
+                    <!-- <div class="mou">
                         <input type="name" placeholder="Name" required><br>
                     </div>
                     <div class="mou">
                         <input type="email" placeholder="Email" required><br>
+                    </div> -->
+                    <div class="form_group field">
+                        <input type="input" class="form_field" placeholder="Name" id='name' required>
+                        <label for="name" class="form_label">Name</label>
+                    </div>
+                    <div class="form_group field">
+                        <input type="email" class="form_field" placeholder="Email" id='email' required>
+                        <label for="email" class="form_label">Email</label>
                     </div>
                     <div class="mou">
-                        <textarea rows="4" cols="50" placeholder="Message..." required></textarea><br>
+                        <textarea rows="3" cols="50" class="ta" placeholder="Message..." required></textarea><br>
                     </div>
                     <div class="mou">
                         <button class="btn1">Submit</button>
